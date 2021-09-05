@@ -83,20 +83,20 @@ if (config.LANG == 'AZ') {
     dlang_input = 'İşlənmiş Mətn:'
 }
 if (config.LANG == 'ML') {
-    dlang_dsc = 'മറുപടി നൽകിയ സന്ദേശത്തിന്റെ ഭാഷ ess ഹിക്കുക.'
-    closer_res = 'ഏറ്റവും അടുത്ത ഫലം:'
+    dlang_dsc = 'മറുപടി നൽകി�? സന്ദേശത്തിന്റെ ഭാ�? ess ഹിക്കു�?.'
+    closer_res = 'ഏറ്റവു�? അടുത്ത ഫല�?:'
     dlang_lang = 'നാവ്:'
-    dlang_similarity = 'സമാനത:'
-    dlang_other = 'മറ്റ് ഭാഷകൾ'
-    dlang_input = 'പ്രോസസ്സ് ചെയ്ത വാചകം:'
+    dlang_similarity = 'സമാന�?:'
+    dlang_other = 'മറ്റ�? ഭാഷക�?'
+    dlang_input = 'പ്രോസസ്സ�? ചെയ്�? വാചക�?:'
 }
 if (config.LANG == 'HI') {
-    dlang_dsc = 'उत्तर दिए गए संदेश की भाषा का अनुमान लगाएं'
+    dlang_dsc = 'उत्त�? दि�? गए संदे�? की भाषा का अनुमान लगाए�?'
     closer_res = 'निकटतम परिणाम:'
-    dlang_lang = 'जुबान:'
+    dlang_lang = 'जुबा�?:'
     dlang_similarity = 'समानता:'
     dlang_other = 'अन्य भाषाएँ'
-    dlang_input = 'संसाधित पाठ:'
+    dlang_input = 'संसाधि�? पा�?:'
 }
 if (config.LANG == 'ES') {
     dlang_dsc = 'Adivina el idioma del mensaje respondido.'
@@ -143,7 +143,7 @@ if (config.WORKTYPE == 'private') {
         ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
         if ('text' in ceviri) {
             return await message.reply('*▶️ ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
-            + '*◀️ ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+            + '*◀�? ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
             + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
         } else {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
@@ -176,18 +176,18 @@ if (config.WORKTYPE == 'private') {
         succ_off = 'Antilink Uğurla Bağlandı!'
     }
     if (config.LANG == 'HI') {
-        l_dsc = 'एंटीलिंक टूल को सक्रिय करता है।'
+        l_dsc = 'एंटीलिंक टू�? को सक्रिय करता है�?'
         alr_on = 'एंटीलिंक पहले से ही खुला है!'
-        alr_off = 'एंटीलिंक वर्तमान में बंद है!'
-        succ_on = 'एंटीलिंक सफलतापूर्वक खोला गया!'
-        succ_off = 'एंटीलिंक सफलतापूर्वक बंद!'
+        alr_off = 'एंटीलिंक वर्तमा�? मे�? बं�? है!'
+        succ_on = 'एंटीलिंक सफलतापूर्व�? खोला गय�?!'
+        succ_off = 'एंटीलिंक सफलतापूर्व�? बं�?!'
     }
     if (config.LANG == 'ML') {
-        l_dsc = 'ആന്റിലിങ്ക് ഉപകരണം സജീവമാക്കുന്നു.'
-        alr_on = 'ആന്റിലിങ്ക് ഇതിനകം തുറന്നു!'
-        alr_off = 'ആന്റിലിങ്ക് നിലവിൽ അടച്ചിരിക്കുന്നു!'
-        succ_on = 'ആന്റിലിങ്ക് വിജയകരമായി തുറന്നു!'
-        succ_off = 'ആന്റിലിങ്ക് വിജയകരമായി അടച്ചു!'
+        l_dsc = 'ആന്റിലിങ്ക�? ഉപകരണം സജീവമാക്കുന്ന�?.'
+        alr_on = 'ആന്റിലിങ്ക�? ഇതിനകം തുറന്ന�?!'
+        alr_off = 'ആന്റിലിങ്ക�? നിലവിൽ അടച്ചിരിക്കുന്നു!'
+        succ_on = 'ആന്റിലിങ്ക�? വിജയകരമായി തുറന്ന�?!'
+        succ_off = 'ആന്റിലിങ്ക�? വിജയകരമായി അടച്ചു!'
     }
     if (config.LANG == 'PT') {
         l_dsc = 'Ativa a ferramenta Antilink.'
@@ -273,17 +273,17 @@ if (config.WORKTYPE == 'private') {
         succ_off_bio = 'Autobio Uğurla Bağlandı!'
     }
     if (config.LANG == 'HI') {
-        auto_dsc = 'अपने बायो में लाइव घड़ी जोड़ें!'
+        auto_dsc = 'अपने बायो मे�? लाइव घड़ी जोड़ें!'
         alr_on_bio = 'Autobio पहले से ही खुला है!'
-        alr_off_bio = 'Autobio वर्तमान में बंद है!'
-        succ_on_bio = 'Autobio सफलतापूर्वक खोला गया!'
-        succ_off_bio = 'Autobio सफलतापूर्वक बंद!'
+        alr_off_bio = 'Autobio वर्तमा�? मे�? बं�? है!'
+        succ_on_bio = 'Autobio सफलतापूर्व�? खोला गय�?!'
+        succ_off_bio = 'Autobio सफलतापूर्व�? बं�?!'
     }
     if (config.LANG == 'ML') {
-        auto_dsc = 'നിങ്ങളുടെ ബയോയിലേക്ക് തത്സമയ ക്ലോക്ക് ചേർക്കുക!'
-        alr_on_bio = 'Autobio ഇതിനകം തുറന്നു!'
+        auto_dsc = 'നിങ്ങളുട�? ബയോയിലേക്ക�? തത്സമയ ക്ലോക്ക് ചേർക്കുക!'
+        alr_on_bio = 'Autobio ഇതിനകം തുറന്ന�?!'
         alr_off_bio = 'Autobio നിലവിൽ അടച്ചിരിക്കുന്നു!'
-        succ_on_bio = 'Autobio വിജയകരമായി തുറന്നു!'
+        succ_on_bio = 'Autobio വിജയകരമായി തുറന്ന�?!'
         succ_off_bio = 'Autobio വിജയകരമായി അടച്ചു!'
     }
     if (config.LANG == 'PT') {
@@ -448,7 +448,12 @@ if (config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
         }));
     }
-    Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+    Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
@@ -476,35 +481,67 @@ if (config.WORKTYPE == 'private') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY SONG «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, ptt: false});
+            });
+    }));
+    
+    Asena.addCommand({pattern: 'play ?(.*)', fromMe: false, desc: Lang.PLAY_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
+        let arama = await yts(match[1]);
+        arama = arama.all;
+        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
+
+        let title = arama[0].title.replace(' ', '+');
+        let stream = ytdl(arama[0].videoId, {
+            quality: 'highestaudio',
+        });
+    
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        ffmpeg(stream)
+            .audioBitrate(320)
+            .save('./' + title + '.mp3')
+            .on('end', async () => {
+                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
+                writer.setFrame('TIT2', arama[0].title)
+                    .setFrame('TPE1', [arama[0].author.name])
+                    .setFrame('APIC', {
+                        type: 3,
+                        data: fs.readFileSync(title + '.jpg'),
+                        description: arama[0].description
+                    });
+                writer.addTag();
+
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY MUSIC «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3 type Document\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
             });
     }));
 
-    Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+    Asena.addCommand({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
-        var VID = '';
         try {
-            if (match[1].includes('watch')) {
-                var tsts = match[1].replace('watch?v=', '')
-                var alal = tsts.split('/')[3]
-                VID = alal
-            } else {     
-                VID = match[1].split('/')[3]
-            }
+            var arama = await yts({videoId: ytdl.getURLVideoID(match[1])});
         } catch {
             return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
         }
+
         var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
 
-        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
+        var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
+        yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, caption: arama.title});
         });
     }));
 
@@ -696,7 +733,7 @@ if (config.WORKTYPE == 'private') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`🇮🇳 *भारत के लिए डेटा:*\n😷 *कुल मामले:* ${resp.cases}\n🏥 *दैनिक मामले:* ${resp.todayCases}\n⚰️ *कुल मौतें:* ${resp.deaths}\n☠️ *रोज की मौत:* ${resp.todayDeaths}\n💊 *कुल बरामद:* ${resp.recovered}\n😷 *एक्टिव केस:* ${resp.active}\n🆘 *गंभीर मामले:* ${resp.critical}\n🧪 *कुल टेस्ट:* ${resp.totalTests}`);
+                    await message.reply(`🇮🇳 *भारत के लि�? डेटा:*\n😷 *कु�? मामल�?:* ${resp.cases}\n🏥 *दैनि�? मामल�?:* ${resp.todayCases}\n⚰️ *कु�? मौते�?:* ${resp.deaths}\n☠️ *रो�? की मौ�?:* ${resp.todayDeaths}\n💊 *कु�? बराम�?:* ${resp.recovered}\n😷 *एक्टिव के�?:* ${resp.active}\n🆘 *गंभी�? मामल�?:* ${resp.critical}\n🧪 *कु�? टेस्�?:* ${resp.totalTests}`);
 
                 });
 
@@ -833,7 +870,7 @@ else if (config.WORKTYPE == 'public') {
         ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
         if ('text' in ceviri) {
             return await message.reply('*▶️ ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
-            + '*◀️ ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+            + '*◀�? ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
             + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
         } else {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
@@ -917,6 +954,11 @@ else if (config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
         arama = arama.all;
@@ -943,35 +985,67 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY SONG «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, ptt: false});
+            });
+    }));
+    
+    Asena.addCommand({pattern: 'play ?(.*)', fromMe: false, desc: Lang.PLAY_DESC}, (async (message, match) => { 
+
+        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
+        let arama = await yts(match[1]);
+        arama = arama.all;
+        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_SONG,MessageType.text);
+
+        let title = arama[0].title.replace(' ', '+');
+        let stream = ytdl(arama[0].videoId, {
+            quality: 'highestaudio',
+        });
+    
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        ffmpeg(stream)
+            .audioBitrate(320)
+            .save('./' + title + '.mp3')
+            .on('end', async () => {
+                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
+                writer.setFrame('TIT2', arama[0].title)
+                    .setFrame('TPE1', [arama[0].author.name])
+                    .setFrame('APIC', {
+                        type: 3,
+                        data: fs.readFileSync(title + '.jpg'),
+                        description: arama[0].description
+                    });
+                writer.addTag();
+
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '*» PLAY MUSIC «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3 type Document\n\n*_Please wait for the media file to be sent it may take a few minutes_*' });
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data});
             });
     }));
 
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
 
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
-        var VID = '';
         try {
-            if (match[1].includes('watch')) {
-                var tsts = match[1].replace('watch?v=', '')
-                var alal = tsts.split('/')[3]
-                VID = alal
-            } else {     
-                VID = match[1].split('/')[3]
-            }
+            var arama = await yts({videoId: ytdl.getURLVideoID(match[1])});
         } catch {
             return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
         }
+
         var reply = await message.client.sendMessage(message.jid,Lang.DOWNLOADING_VIDEO,MessageType.text);
 
-        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
+        var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
+        yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_VIDEO,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4, contextInfo: { forwardingScore: 1000, isForwarded: true }, quoted: message.data, caption: arama.title});
         });
     }));
 
@@ -1163,7 +1237,7 @@ else if (config.WORKTYPE == 'public') {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
                     resp = JSON.parse(ok.body);
-                    await message.reply(`🇮🇳 *भारत के लिए डेटा:*\n😷 *कुल मामले:* ${resp.cases}\n🏥 *दैनिक मामले:* ${resp.todayCases}\n⚰️ *कुल मौतें:* ${resp.deaths}\n☠️ *रोज की मौत:* ${resp.todayDeaths}\n💊 *कुल बरामद:* ${resp.recovered}\n😷 *एक्टिव केस:* ${resp.active}\n🆘 *गंभीर मामले:* ${resp.critical}\n🧪 *कुल टेस्ट:* ${resp.totalTests}`);
+                    await message.reply(`🇮🇳 *भारत के लि�? डेटा:*\n😷 *कु�? मामल�?:* ${resp.cases}\n🏥 *दैनि�? मामल�?:* ${resp.todayCases}\n⚰️ *कु�? मौते�?:* ${resp.deaths}\n☠️ *रो�? की मौ�?:* ${resp.todayDeaths}\n💊 *कु�? बराम�?:* ${resp.recovered}\n😷 *एक्टिव के�?:* ${resp.active}\n🆘 *गंभी�? मामल�?:* ${resp.critical}\n🧪 *कु�? टेस्�?:* ${resp.totalTests}`);
 
                 });
 
